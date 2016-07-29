@@ -1,7 +1,8 @@
-name: ${name}
-main: ${package}.${name}
-version: ${version}
-author: Netherfoam, Timtower, KaiNoMood
+name: QuickShop
+main: com.pb.spigot.quickshop.QuickShop
+version: 0.9.21-custom
+author: IncognitoJam
+authors: [Netherfoam, Timtower, KaiNoMood]
 
 description: Economy Shops plugin
 softdepend: [Herochat, Vault]
@@ -11,7 +12,7 @@ commands:
         description: QuickShop command
         usage: /qs
         aliases: [shop]
-        
+
 permissions:
     quickshop.create.sell:
         description: Allows a player to sell from a shop
@@ -55,3 +56,4 @@ permissions:
     quickshop.taxexemption:
         description: Tax exemption
         default: false
+
