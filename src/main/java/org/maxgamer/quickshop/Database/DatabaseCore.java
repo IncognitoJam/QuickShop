@@ -1,13 +1,13 @@
-package org.maxgamer.quickshop.Database;
+package org.maxgamer.quickshop.database;
 
 import java.sql.Connection;
 
 public interface DatabaseCore {
-	public Connection getConnection();
+    Connection getConnection();
 
-	public void queue(BufferStatement bs);
+    void queue(BufferStatement bs);
 
-	public void flush();
+    void flush();
 
-	public void close();
+    void close();
 }

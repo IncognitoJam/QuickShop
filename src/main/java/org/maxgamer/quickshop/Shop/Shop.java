@@ -1,7 +1,4 @@
-package org.maxgamer.quickshop.Shop;
-
-import java.util.List;
-import java.util.UUID;
+package org.maxgamer.quickshop.shop;
 
 import org.bukkit.Location;
 import org.bukkit.block.Block;
@@ -9,70 +6,73 @@ import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public abstract interface Shop {
-	public abstract Shop clone();
+import java.util.List;
+import java.util.UUID;
 
-	public abstract int getRemainingStock();
+public interface Shop {
+    Shop clone();
 
-	public abstract int getRemainingSpace();
+    int getRemainingStock();
 
-	public abstract boolean matches(ItemStack paramItemStack);
+    int getRemainingSpace();
 
-	public abstract Location getLocation();
+    boolean matches(ItemStack paramItemStack);
 
-	public abstract double getPrice();
+    Location getLocation();
 
-	public abstract void setPrice(double paramDouble);
+    double getPrice();
 
-	public abstract void update();
+    void setPrice(double paramDouble);
 
-	public abstract short getDurability();
+    void update();
 
-	public abstract UUID getOwner();
+    short getDurability();
 
-	public abstract ItemStack getItem();
+    UUID getOwner();
 
-	public abstract void remove(ItemStack paramItemStack, int paramInt);
+    ItemStack getItem();
 
-	public abstract void add(ItemStack paramItemStack, int paramInt);
+    void remove(ItemStack paramItemStack, int paramInt);
 
-	public abstract void sell(Player paramPlayer, int paramInt);
+    void add(ItemStack paramItemStack, int paramInt);
 
-	public abstract void buy(Player paramPlayer, int paramInt);
+    void sell(Player paramPlayer, int paramInt);
 
-	public abstract void setOwner(UUID paramString);
+    void buy(Player paramPlayer, int paramInt);
 
-	public abstract void setUnlimited(boolean paramBoolean);
+    void setOwner(UUID paramString);
 
-	public abstract boolean isUnlimited();
+    void setUnlimited(boolean paramBoolean);
 
-	public abstract ShopType getShopType();
+    boolean isUnlimited();
 
-	public abstract boolean isBuying();
+    ShopType getShopType();
 
-	public abstract boolean isSelling();
+    boolean isBuying();
 
-	public abstract void setShopType(ShopType paramShopType);
+    boolean isSelling();
 
-	public abstract void setSignText();
+    void setShopType(ShopType paramShopType);
 
-	public abstract void setSignText(String[] paramArrayOfString);
+    void setSignText();
 
-	public abstract List<Sign> getSigns();
+    void setSignText(String[] paramArrayOfString);
 
-	public abstract boolean isAttached(Block paramBlock);
+    List<Sign> getSigns();
 
-	public abstract String getDataName();
+    boolean isAttached(Block paramBlock);
 
-	public abstract void delete();
+    String getDataName();
 
-	public abstract void delete(boolean paramBoolean);
+    void delete();
 
-	public abstract boolean isValid();
+    void delete(boolean paramBoolean);
 
-	public abstract void onUnload();
+    boolean isValid();
 
-	public abstract void onLoad();
+    void onUnload();
 
-	public abstract void onClick();
+    void onLoad();
+
+    void onClick();
 }
